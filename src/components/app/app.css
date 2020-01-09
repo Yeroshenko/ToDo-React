@@ -1,0 +1,14 @@
+.todo-app {
+    max-width: 31.25rem;
+    padding: 2rem;
+    border-radius: .5rem;
+    background-color: #fff;
+    box-shadow: 1rem 1rem 2.7rem 0.3rem rgba(0, 0, 0, 0.3);
+}
+  
+.top-panel {
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem 0;
+  }
+  

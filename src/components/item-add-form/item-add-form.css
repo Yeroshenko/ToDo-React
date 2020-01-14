@@ -1,3 +1,12 @@
 .item-add-form {
     margin-top: 1rem;
+    display: flex;
+}
+
+.item-add-form input {
+    margin-right: .3rem;
+}
+
+.item-add-form button {
+    white-space: nowrap;
 }

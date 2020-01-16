@@ -5,6 +5,7 @@ import SearchPanel from '../search-panel'
 import ItemStatusFilter from '../item-status-filter'
 import TodoList from '../todo-list'
 import ItemAddForm from '../item-add-form'
+import Autor from '../autor'
 
 import './app.css'
 
@@ -136,25 +137,30 @@ export default class App extends Component {
         const todoCount = todoData.length - doneCount
     
         return (
-            <div className = 'todo-app'>
-                <AppHeader toDo = {todoCount} done = {doneCount} />
-                <div className = 'top-panel'>
-                    <SearchPanel 
-                        onSearchChange = {this.onSearchChange} />
-                    <ItemStatusFilter 
-                        filter = {filter}
-                        onFilterChange = {this.onFilterChange} />
+            <div>
+                <div className = 'todo-app'>
+                    <AppHeader toDo = {todoCount} done = {doneCount} />
+                    <div className = 'top-panel'>
+                        <SearchPanel 
+                            onSearchChange = {this.onSearchChange} />
+                        <ItemStatusFilter 
+                            filter = {filter}
+                            onFilterChange = {this.onFilterChange} />
+                    </div>
+
+                    <TodoList
+                        todos = {visibleItems}
+                        onDeleted = { this.deleteItem }
+                        onToggleImportant = { this.onToggleImportant }
+                        onToggleDone = { this.onToggleDone }
+                    />
+
+                    <ItemAddForm onItemAdded = { this.addItem } />
                 </div>
 
-                <TodoList
-                    todos = {visibleItems}
-                    onDeleted = { this.deleteItem }
-                    onToggleImportant = { this.onToggleImportant }
-                    onToggleDone = { this.onToggleDone }
-                />
-
-                <ItemAddForm onItemAdded = { this.addItem } />
+                <Autor />
             </div>
+
         );
       }
 }

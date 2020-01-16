@@ -1,0 +1,16 @@
+.autor {
+    position: absolute;
+    left: 50%;
+    bottom: .5rem;
+    transform: translateX(-50%);
+    font-size: .9rem;
+    text-decoration: none;
+    color: #FFF;
+    opacity: 0.5;
+}
+
+.autor:hover {
+    color: #FFF;
+    text-decoration: none;
+    opacity: 1;
+}
